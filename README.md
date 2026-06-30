@@ -79,14 +79,20 @@ graph TD
 
 ## 🛠️ Tech Stack
 
-| Category | Technology | Description |
-|---|---|---|
-| **Core Framework** | Next.js 15 (App Router), React 19, TypeScript | Serverless routing & strict type safety |
-| **Styling** | Tailwind CSS v4, Lucide React, Framer Motion | Modern GIS aesthetics and dark mode palettes |
-| **Maps & GIS** | Leaflet, React Leaflet, Esri World Imagery | Geodetic geocoding & coordinate tracker |
-| **Charts** | Recharts | SVG Travel Delay & Bottleneck Centrality graphs |
-| **State** | Zustand | Global application state management |
-| **Data & Tables** | TanStack Table | Structural analysis logging |
+| Category | Technology | Purpose |
+|-----------|------------|---------|
+| 🚀 **Core Framework** | **Next.js 15 (App Router)** | Full-stack React framework with server-side rendering and App Router |
+| | **React 19** | Component-based UI development |
+| | **TypeScript** | Static type checking and improved code reliability |
+| 🎨 **UI & Styling** | **Tailwind CSS v4** | Utility-first CSS framework for responsive UI |
+| | **Lucide React** | Modern SVG icon library |
+| | **Framer Motion** | Smooth animations and interactive transitions |
+| 🗺️ **Maps & GIS** | **Leaflet** | Interactive mapping engine |
+| | **React Leaflet** | React integration for Leaflet maps |
+| | **Esri World Imagery** | High-resolution satellite imagery basemap |
+| 📊 **Data Visualization** | **Recharts** | Interactive charts for analytics and insights |
+| ⚡ **State Management** | **Zustand** | Lightweight global state management |
+| 📋 **Tables & Data** | **TanStack Table** | High-performance data tables and analysis logs |
 
 ---
 
