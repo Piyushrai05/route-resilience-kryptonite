@@ -14,21 +14,21 @@
 ---
 
 ## Table of Contents
-* [Problem Statement](#-problem-statement)
-* [Solution](#-solution)
-* [Key Features](#-key-features)
-* [Architecture](#-architecture)
-* [Tech Stack](#-tech-stack)
-* [Getting Started](#-getting-started)
-* [Environment Variables](#-environment-variables)
-* [API Documentation](#-api-documentation)
-* [Demo Credentials](#-demo-credentials)
-* [Privacy & Safety](#-privacy--safety)
-* [Team](#-team)
-* [Future Scope](#-future-scope)
-* [License](#-license)
-* [Disclaimer](#-disclaimer)
-* [Screenshots](#%EF%B8%8F-screenshots)
+* [Problem Statement](#problem-statement)
+* [Solution](#solution)
+* [Key Features](#key-features)
+* [Architecture](#architecture)
+* [Tech Stack](#tech-stack)
+* [Getting Started](#getting-started)
+* [Environment Variables](#environment-variables)
+* [API Documentation](#api-documentation)
+* [Demo Credentials](#demo-credentials)
+* [Privacy & Safety](#privacy--safety)
+* [Team](#team)
+* [Future Scope](#future-scope)
+* [License](#license)
+* [Disclaimer](#disclaimer)
+* [Screenshots](#screenshots)
 
 ---
 
