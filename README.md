@@ -30,27 +30,35 @@ Route Resilience combines:
 
 ---
 
-## 🖥️ Screenshots Gallery
+## 🖼️ Screenshots
 
-### 1. GIS Control Dashboard
-The main command center features dataset registration, real-time KPI metrics, Quick Action links, recent analyses logs, and a live activity feed.
-![01_dashboard](./public/screenshots/01_dashboard.png)
+### GIS Control Dashboard
 
-### 2. AI Road Extraction
-Side-by-side comparison slider revealing raw satellite imagery vs semantic road network masks, accompanied by deep learning model evaluation metrics (IoU, Dice).
-![02_extraction](./public/screenshots/02_extraction.png)
+<img src="./public/screenshots/dashboard.png" width="100%" alt="Dashboard"/>
 
-### 3. Graph Construction & Topology Healing
-Consolidate disconnected subgraphs by tuning edge connection distance thresholds and selecting DSU vs MST heuristics.
-![03_graph](./public/screenshots/03_graph.png)
+---
 
-### 4. Disaster Simulation & Bottleneck Inspector
-Interactive Leaflet GIS map with dynamic flood circles, alternative bypass routing, and Recharts graphs illustrating travel delay trends.
-![04_simulation](./public/screenshots/04_simulation.png)
+### AI Road Extraction
 
-### 5. Analytical Reports & Exports
-Print-ready PDF report briefs and data exporters for GeoJSON vector layouts and CSV matrices.
-![05_reports](./public/screenshots/05_reports.png)
+<img src="./public/screenshots/extraction.png" width="100%" alt="Road Extraction"/>
+
+---
+
+### Graph Construction & Topology Healing
+
+<img src="./public/screenshots/graph.png" width="100%" alt="Graph Healing"/>
+
+---
+
+### Disaster Simulation
+
+<img src="./public/screenshots/simulation.png" width="100%" alt="Simulation"/>
+
+---
+
+### Reports & Export
+
+<img src="./public/screenshots/reports.png" width="100%" alt="Reports"/>
 
 ---
 
