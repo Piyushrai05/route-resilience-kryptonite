@@ -1,28 +1,46 @@
-# 🌐 Route Resilience — AI-Powered GIS Platform
+```text
+ ____             _         ____           _ _ _
+|  _ \ ___  _   _| |_ ___  |  _ \ ___  ___(_) (_) ___ _ __   ___ ___
+| |_) / _ \| | | | __/ _ \ | |_) / _ \/ __| | | |/ _ \ '_ \ / __/ _ \
+|  _ < (_) | |_| | ||  __/ |  _ <  __/\__ \ | | |  __/ | | | (_|  __/
+|_| \_\___/ \__,_|\__\___| |_| \_\___||___/_|_|_|\___|_| |_|\___\___|
+```
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Antariksh_Bharat_Hackathon-PS--10-blue?style=for-the-badge&logo=satellite" alt="Hackathon Badge" />
-  <img src="https://img.shields.io/badge/Next.js_15-App_Router-black?style=for-the-badge&logo=next.js" alt="Next.js Badge" />
-  <img src="https://img.shields.io/badge/TypeScript-Secure-blue?style=for-the-badge&logo=typescript" alt="TypeScript Badge" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS_v4-Styling-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind Badge" />
-  <img src="https://img.shields.io/badge/Open_Source-MIT-green?style=for-the-badge&logo=open-source-initiative" alt="MIT License Badge" />
-</div>
+# Route Resilience
+### AI-powered GIS platform for road extraction, topology reconstruction, bottleneck analysis, and disaster simulation.
+
+**TypeScript React NextJS Tailwind CSS Leaflet Zustand Recharts**
 
 ---
 
-## 📖 Project Overview
+## Table of Contents
+* [Problem Statement](#-problem-statement)
+* [Solution](#-solution)
+* [Key Features](#-key-features)
+* [Architecture](#-architecture)
+* [Tech Stack](#-tech-stack)
+* [Getting Started](#-getting-started)
+* [Environment Variables](#-environment-variables)
+* [API Documentation](#-api-documentation)
+* [Demo Credentials](#-demo-credentials)
+* [Privacy & Safety](#-privacy--safety)
+* [Team](#-team)
+* [Future Scope](#-future-scope)
+* [License](#-license)
+* [Disclaimer](#-disclaimer)
+* [Screenshots](#%EF%B8%8F-screenshots)
 
-**Route Resilience** is an enterprise-grade geospatial intelligence (GIS) platform developed for the **Antariksh Bharat Hackathon (PS-10)**. The platform solves a critical national security and disaster response challenge: **extracting roads hidden beneath satellite occlusions (heavy forest canopy, clouds, shadows) and modeling road network structural resilience under disaster flows.**
+---
 
-### 🎯 Mission & Vision
-*   **Mission**: Provide disaster response squads (NDMA, SDRF) and urban planners with real-time, AI-reconstructed road network graphs to calculate alternative bypasses within seconds of disaster impact.
-*   **Vision**: Build an autonomous national geospatial pipeline combining multi-spectral satellite imagery and topological graph theories to ensure zero-delay connectivity routing during national crises.
+## ⚠️ Problem Statement
 
-### ⚠️ Problem Statement
 Satellite imagery frequently suffers from cloud coverage, shadow blockages, and thick tree canopies, creating gaps in extracted road networks. Traditional shortest-path routing algorithms fail when edge links in a graph are severed by floods, landslides, or metro construction, leading to critical bottlenecks and isolated regions.
 
-### 💡 The Solution
-Route Resilience combines:
+---
+
+## 💡 Solution
+
+**Route Resilience** resolves satellite occlusions and models road network structural resilience by combining:
 1.  **AI Road Segmentation**: Generates road masks using deep learning (U-Net architectures).
 2.  **Topological Graph Construction**: Thins masks into 1-pixel skeletons to extract graph node-edge objects.
 3.  **Topology Healing Heuristics**: Automatically bridges disjoint segment components using Disjoint Set Union (DSU) and Minimum Spanning Tree (MST) algorithms.
@@ -30,31 +48,17 @@ Route Resilience combines:
 
 ---
 
-## 🖥️ Screenshots Gallery
+## 🎯 Key Features
 
-### 1. GIS Control Dashboard
-The main command center features dataset registration, real-time KPI metrics, Quick Action links, recent analyses logs, and a live activity feed.
-![01_dashboard](/public/screenshots/01_dashboard.png)
-
-### 2. AI Road Extraction
-Side-by-side comparison slider revealing raw satellite imagery vs semantic road network masks, accompanied by deep learning model evaluation metrics (IoU, Dice).
-![02_extraction](/public/screenshots/02_extraction.png)
-
-### 3. Graph Construction & Topology Healing
-Consolidate disconnected subgraphs by tuning edge connection distance thresholds and selecting DSU vs MST heuristics.
-![03_graph](/public/screenshots/03_graph.png)
-
-### 4. Disaster Simulation & Bottleneck Inspector
-Interactive Leaflet GIS map with dynamic flood circles, alternative bypass routing, and Recharts graphs illustrating travel delay trends.
-![04_simulation](/public/screenshots/04_simulation.png)
-
-### 5. Analytical Reports & Exports
-Print-ready PDF report briefs and data exporters for GeoJSON vector layouts and CSV matrices.
-![05_reports](/public/screenshots/05_reports.png)
+*   **AI Road Extraction Slider**: Side-by-side comparison sliding viewport with ML evaluation metrics.
+*   **Graph Healing Pipeline**: Interactive controls to run MST (Minimum Spanning Tree) or DSU (Disjoint Set Union) consolidation algorithms, resolving disconnected road components.
+*   **Disaster Simulator**: Model Flood, Landslide, Construction, or Accident blockages. Dynamically plots alternative rerouting paths on the GIS map, calculates traffic delay factor trends, and updates the overall Resilience Index.
+*   **Interactive Map Component**: Supports dynamic swapping between Esri World Imagery (Satellite) and OpenStreetMap (Streets). Includes a custom distance measurement tool, active coordinate tracker, and SVG markers identifying high-centrality road bottlenecks.
+*   **Analytical Reports**: PDF printable summaries, historical logs, and data exports in CSV format and GeoJSON vectors.
 
 ---
 
-## 🏗️ Architecture & Data Flow
+## 🏗️ Architecture
 
 ```mermaid
 graph TD
@@ -69,11 +73,11 @@ graph TD
 *   **Frontend**: Next.js 15 App Router structured for fluid client-side rendering.
 *   **State Management**: Zustand global store synchronizing dataset states, slider positions, and simulation outputs.
 *   **GIS Engine**: React Leaflet utilizing Esri World Imagery tiles and WGS 84 (EPSG:4326) projection coordinate tracking.
-*   **AI Integration**: Pre-structured REST endpoints ready to connect with FastAPI, PyTorch (segmentation), and NetworkX (graph topology).
+*   **AI Integration**: Pre-structured REST endpoints ready to connect with FastAPI, PyTorch (segmentation), and NetworkX (graph topology). Detailed guidelines are available in [docs/Architecture.md](docs/Architecture.md).
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Tech Stack
 
 | Category | Technology | Description |
 |---|---|---|
@@ -83,34 +87,6 @@ graph TD
 | **Charts** | Recharts | SVG Travel Delay & Bottleneck Centrality graphs |
 | **State** | Zustand | Global application state management |
 | **Data & Tables** | TanStack Table | Structural analysis logging |
-
----
-
-## 📂 Folder Structure
-
-```text
-route-resilience/
-├── docs/                      # Extensive system documentation
-│   ├── Architecture.md        # Technical data flows & layouts
-│   ├── API.md                 # Serverless endpoints specifications
-│   ├── Development.md         # Guide to local environment setups
-│   └── Deployment.md          # Docker & Vercel deployment setups
-├── public/                    # Static assets & screenshots
-│   ├── screenshots/           # Gallery screenshots
-│   └── images/                # Raw satellite imagery assets
-├── src/
-│   ├── app/                   # Next.js App Router directories
-│   │   ├── api/               # Serverless Mock API routes (/upload, /segment, /heal, /simulate)
-│   │   ├── extraction/        # Screen 2: AI Road Extraction Slider
-│   │   ├── graph/             # Screen 3: DSU/MST Graph Healing
-│   │   ├── simulation/        # Screen 4: Disaster Pathfinding & Maps
-│   │   └── reports/           # Screen 5: PDF printing & data exports
-│   ├── components/            # Reusable UI component modules
-│   │   ├── layout/            # Navbar, Sidebar, StatusBar
-│   │   └── maps/              # Dynamic Leaflet GIS map container
-│   ├── store/                 # Zustand store containers
-│   └── lib/                   # Utility helpers (clsx, tailwind-merge)
-```
 
 ---
 
@@ -144,19 +120,53 @@ docker run -p 3000:3000 route-resilience:latest
 
 ---
 
-## 📈 Roadmap
+## 🔑 Environment Variables
 
-- `[x]` **Phase 1**: Recreate high-fidelity dashboard mockups and unified layouts.
-- `[x]` **Phase 2**: Integrate Leaflet GIS maps, satellite layers, and distance measure tools.
-- `[x]` **Phase 3**: Develop AI Comparison Slider, graph healing controllers, and simulation charts.
-- `[ ]` **Phase 4**: Replace Next.js mock API routers with live FastAPI endpoints (U-Net segmentation, NetworkX pathfinding).
-- `[ ]` **Phase 5**: Enable WebSockets streaming to render node-by-node extraction status in real-time.
+Create a `.env.local` file in the root directory:
+```env
+PORT=3001
+NEXT_PUBLIC_APP_URL=http://localhost:3001
+NEXT_PUBLIC_ESRI_IMAGERY_URL=https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}
+NEXT_PUBLIC_OSM_TILES_URL=https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+```
+See [.env.example](.env.example) for a template.
 
 ---
 
-## 🤝 Contributing
+## 📡 API Documentation
 
-Contributions are what make the open-source community such an amazing place. Please review our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) before submitting Pull Requests.
+Mock REST API endpoints are served locally:
+*   `POST /api/upload`: Register satellite raw imagery metadata.
+*   `POST /api/segment`: semantic road extraction details.
+*   `POST /api/heal`: DSU/MST skeleton consolidations.
+*   `POST /api/simulate`: Travel delay and shortest pathfinding calculations.
+See [docs/API.md](docs/API.md) for schemas.
+
+---
+
+## 👥 Demo Credentials
+
+No authentication credentials are required. The dashboard runs as a serverless administrative client dashboard by default for simplified evaluator testing.
+
+---
+
+## 🔒 Privacy & Safety
+
+All metadata and satellite uploads are processed on the client or mock API boundaries. No personal identifiable information (PII) is tracked or stored in the GIS spatial database.
+
+---
+
+## 👥 Team
+*   **Piyush Rai** — Lead Software Engineer / AI Researcher
+
+---
+
+## 📈 Future Scope
+
+*   **SAR Imagery Integration**: Support Synthetic Aperture Radar (SAR) imagery to extract road networks under heavy clouds.
+*   **Live Overpass API Integration**: Fetch real-world road vector lines dynamically based on viewport bounds.
+*   **WebSocket Updates**: Real-time progress updates from backend PyTorch model weights.
+See [docs/FutureScope.md](docs/FutureScope.md) for more details.
 
 ---
 
@@ -166,15 +176,38 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more details.
 
 ---
 
-## 📧 Contact
+## ⚖️ Disclaimer
 
-**Piyush Rai**
-*   **GitHub**: [Piyushrai05](https://github.com/Piyushrai05)
-*   **LinkedIn**: [Piyush Rai](https://www.linkedin.com/in/piyush-rai-9a101b1b1/) (Placeholder)
-*   **Email**: [piyush.rai.placeholder@gmail.com]
+This application returns mock API inferences. Actual AI road segmentation and graph calculations depend on the deployment of external PyTorch and NetworkX Python services.
 
 ---
 
-<div align="center">
-  <sub>Made with ❤️ by <a href="https://github.com/Piyushrai05">Piyush Rai</a> for the Antariksh Bharat Hackathon 2026</sub>
-</div>
+## 🖼️ Screenshots
+
+### GIS Control Dashboard
+
+<img src="./public/screenshots/dashboard.png" width="100%" alt="Dashboard"/>
+
+---
+
+### AI Road Extraction
+
+<img src="./public/screenshots/extraction.png" width="100%" alt="Road Extraction"/>
+
+---
+
+### Graph Construction & Topology Healing
+
+<img src="./public/screenshots/graph.png" width="100%" alt="Graph Healing"/>
+
+---
+
+### Disaster Simulation
+
+<img src="./public/screenshots/simulation.png" width="100%" alt="Simulation"/>
+
+---
+
+### Reports & Export
+
+<img src="./public/screenshots/reports.png" width="100%" alt="Reports"/>
